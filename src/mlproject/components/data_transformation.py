@@ -80,12 +80,12 @@ class DataTransformation:
             numerical_column = ["writing_score", "reading_score"]
 
             #devide the train dataset to independent and dependent feature
-            input_features_train_df = train_df.drop(columns=[target_column_name], axis=1)
+            input_features_train_df = train_df.drop(columns=[target_column_name])
             target_feature_train_df = train_df[target_column_name]
 
             ## devide the test dataset to independent  and dependent feature
 
-            input_feature_test_df = test_df.drop(columns=[target_column_name], axis=1)
+            input_feature_test_df = test_df.drop(columns=[target_column_name])
             target_feature_test_df = test_df[target_column_name]
 
             logging.info("Applying Preprocessing on training and test data frame")
